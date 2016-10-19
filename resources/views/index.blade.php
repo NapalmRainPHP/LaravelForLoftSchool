@@ -2,5 +2,6 @@
 @extends('layouts.topcontent')
 
 @section('content')
-	<h1>vsdvsd</h1>
+	<hr>
+	<small>здесь будет список последних игр</small>
 @endsection

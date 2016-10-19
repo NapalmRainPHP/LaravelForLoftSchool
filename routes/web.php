@@ -24,3 +24,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/admin', 'Admin\\AdminPageController@index');
+Route::get('/admin/goods/new', 'Admin\\AdminPageController@newGood');
+Route::get('/admin/goods/store', 'Admin\\AdminPageController@Store');

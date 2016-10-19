@@ -11,4 +11,10 @@ class AdminPageController extends Controller {
     public function index() {
     	return view('admin.goods');
 	}
+	public function newGood() {
+		return view('admin.newgood');
+	}
+	public function Store() {
+
+	}
 }

@@ -22,6 +22,7 @@
 		]); ?>
 	</script>
 </head>
+<body>
 <div class="main-wrapper">
 	<header class="main-header">
 		<div class="logotype-container"><a href="{{ url('/') }}" class="logotype-link"><img src="img/logo.png" alt="Логотип"></a></div>

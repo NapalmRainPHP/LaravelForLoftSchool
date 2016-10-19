@@ -203,7 +203,7 @@ class ComposerStaticInit272d7fe48afc529c9edb6c3fa97e846d
         ),
         'Controllers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/App/Http/Controllers',
+            0 => __DIR__ . '/../..' . '/app/Http/Controllers',
         ),
         'ClassPreloader\\' => 
         array (
@@ -253,6 +253,7 @@ class ComposerStaticInit272d7fe48afc529c9edb6c3fa97e846d
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Good' => __DIR__ . '/../..' . '/app/Good.php',
         'App\\GoodsCategory' => __DIR__ . '/../..' . '/app/GoodsCategory.php',
+        'App\\Http\\Controllers\\Admin\\AdminPageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',

@@ -23,3 +23,4 @@ Route::any('/goods', 'GoodsListController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'Admin\\AdminPageController@index');

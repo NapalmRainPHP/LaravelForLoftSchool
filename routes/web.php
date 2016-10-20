@@ -24,9 +24,6 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 Route::get('/', 'IndexController@Index');
-Route::any('/ses', function () {
-    return view('welcome');
-});
 
 Route::any('/games', 'GoodsListController@index');
 Route::any('/games/{id}', 'GoodsListController@index');
@@ -36,3 +33,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/search/category/{CatName}', 'SearchController@SearchCat');
 Route::get('/search/{SearchString}', 'SearchController@SearchString');
+Route::post('/sendorder', 'OrderFormController@Send');

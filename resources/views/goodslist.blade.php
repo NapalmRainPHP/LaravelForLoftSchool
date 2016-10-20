@@ -23,7 +23,7 @@
 						<div class="product-container__content-text__price__value">
 							Цена: <b>{{$game->Price}}</b>
 							руб
-						</div><a href="#" class="btn btn-blue">Купить</a>
+						</div><a href="#" class="btn btn-blue" id="GameBuy">Купить</a>
 					</div>
 					<div class="product-container__content-text__description">
 						<p>
@@ -34,8 +34,13 @@
 			</div>
 		</div>
 		<div id='OrderPopUp'>
+			<form id='OrderForm' action="{{action('OrderFormController@Send')}}" method="post">
 			<h1>Оформление заказа</h1>
-			<div><input type='email' name='email' value='{{$email}}'></div>
+				{{csrf_field()}}
+				<div><input type='email' placeholder="Введите ваш e-mail" name='email' value='{{$email}}' required></div>
+				<div><input type='text' placeholder="Введите ваше имя" name='Name' required><input type="hidden" name="GameID" value="{{$game->id}}"></div>
+				<div><input type='submit' value="Заказать"></div>
+			</form>
 		</div>
 	@endsection
 @else

@@ -1192,12 +1192,21 @@ a img.aligncenter {
 	z-index: 2000;
 }
 #OrderPopUp {
+	display: none;
 	position: fixed;
 	width: 600px;
-	height: 400px;
+	height: 300px;
 	left: 50%;
 	top: 50%;
-	margin: -200px 0 0 -300px;
+	margin: -120px 0 0 -300px;
 	background: #ffffff;
 	padding: 20px;
+	border: 1px solid #8c8c8c;
+	z-index: 10000;
+}
+#OrderPopUp input {
+	padding: 10px;
+	width: 100%;
+	outline: none;
+	margin: 0 0 20px;
 }

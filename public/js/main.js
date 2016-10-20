@@ -10,7 +10,7 @@ var SendOrder = function(e) {
 		async: true,
 		data: form.serialize(),
 		success: function(response) {
-			alert(response);
+			// alert(response);
 			var result = $.parseJSON(response);
 			if (result.error) {
 				alert(result.errorcode);

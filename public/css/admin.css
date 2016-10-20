@@ -16,3 +16,12 @@ header {
 	width: 900px;
 	margin: 20px auto;
 }
+input, select {
+	padding: 5px;
+	width: 100%;
+	border: 1px solid #545454;
+	background: #343434;
+	margin: 10px 0;
+	color: #ffffff;
+	outline: none;
+}

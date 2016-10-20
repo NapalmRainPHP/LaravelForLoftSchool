@@ -25,4 +25,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/admin', 'Admin\\AdminPageController@index');
 Route::get('/admin/goods/new', 'Admin\\AdminPageController@newGood');
-Route::get('/admin/goods/store', 'Admin\\AdminPageController@Store');
+Route::post('/admin/goods/store', 'Admin\\AdminPageController@GoodStore');
+Route::get('/admin/goods/addcategory', 'Admin\\AdminPageController@AddCat');
+Route::post('/admin/goods/catstore', 'Admin\\AdminPageController@CatStore');

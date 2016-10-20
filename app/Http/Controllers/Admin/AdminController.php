@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\GoodsCategory;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,21 @@ class AdminPageController extends Controller {
     	return view('admin.goods');
 	}
 	public function newGood() {
-		return view('admin.newgood');
+		$cats = GoodsCategory::all();
+		return view('admin.newgood', ['catlist'=>$cats]);
 	}
-	public function Store() {
+	public function GoodStore(Request $req) {
 
+	}
+	public function AddCat() {
+		return view('admin.addcat');
+	}
+	public function CatStore(Request $req) {
+		$cat = new GoodsCategory();
+		$cat->Title = $req->Name;
+		$cat->Description = $req->Description;
+		$cat->save();
+		return redirect('/admin/goods/addcategory');
+		//
 	}
 }

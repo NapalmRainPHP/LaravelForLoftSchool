@@ -23,7 +23,7 @@ class AdminPageController extends Controller {
 		$g->Price = $req->Price;
 		$g->Description = $req->Description;
 		$file = $req->file('image');
-		$newName = substr(base64_encode(time()), 0, 7).'.jpg';
+		$newName = substr(base64_encode(microtime()), 0, 7).'.jpg';
 		$file->move('img/cover/', $newName);
 
 		$g->Image = $newName;

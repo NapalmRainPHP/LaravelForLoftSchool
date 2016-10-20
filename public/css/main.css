@@ -1191,3 +1191,13 @@ a img.aligncenter {
 	padding: 10px;
 	z-index: 2000;
 }
+#OrderPopUp {
+	position: fixed;
+	width: 600px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	margin: -200px 0 0 -300px;
+	background: #ffffff;
+	padding: 20px;
+}

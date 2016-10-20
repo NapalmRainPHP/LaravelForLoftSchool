@@ -10,7 +10,7 @@
 	   			<label for="email" class="controlLabel">E-Mail Address</label>
 	   			<div class="controlBlock">
 					<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-						@if ($errors->has('email'))
+					@if ($errors->has('email'))
 						<span class="help-block">
 							<strong>{{ $errors->first('email') }}</strong>
 						</span>
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 			</div>
-				<div class="form-group">
+			<div class="form-group">
 				<div class="col-md-8 col-md-offset-4">
 					<input type="submit" class="btn btn-primary" value='Login'>
 					<a class="sidebar-category__item__link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>

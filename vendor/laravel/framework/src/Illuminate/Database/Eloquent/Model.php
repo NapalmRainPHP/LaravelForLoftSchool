@@ -555,10 +555,8 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
      * @param  array  $attributes
      * @return static
      */
-    public static function create(array $attributes = [])
-    {
+    public static function create(array $attributes = []) {
         $model = new static($attributes);
-
         $model->save();
 
         return $model;

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 20 2016 г., 14:04
+-- Время создания: Окт 20 2016 г., 18:11
 -- Версия сервера: 5.7.13
 -- Версия PHP: 7.0.8
 
@@ -122,7 +122,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `IsAdmin`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin@qwerty.com', '$2y$10$NlbgQQqJh4UchwWDJYVscesmNpE0b6MtmHu2f9pz0vsqoae0VDxVO', 1, '', '2016-10-20 09:14:22', '2016-10-20 11:20:56'),
+(2, 'fcgc', 'cfgcgc@bj.tre', '$2y$10$d2UqCL2a3rC8a4x/EvMNluM7SajFfvuJclNhwnJ2VXFZAGAOOpKAe', 0, '', '2016-10-20 11:26:47', '2016-10-20 11:28:15'),
+(3, 'vyc', 'admin@qw5erty.com', '$2y$10$HtdBG5ze43CFqsAq2DIyRuRW.CwbCiBYndG3/sLLZ09Io2gt2j35e', 0, 'q6g9TMIcmU40NC48e8UMBAzelplbTEHHlMik6msLG98SXHrYrns5naopWyKY', '2016-10-20 11:31:53', '2016-10-20 11:34:41'),
+(4, 'csdcds', 'csdsd@vvsdv.co', '$2y$10$zlwEe7eMuAh2RCSJEBDJ7ONyuONGcc41e1Wk7YXhmiR/Rl.JFltVi', 1, NULL, '2016-10-20 11:38:52', '2016-10-20 11:38:52');
 
 --
 -- Индексы сохранённых таблиц
@@ -183,7 +193,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

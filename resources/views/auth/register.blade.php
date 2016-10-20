@@ -22,9 +22,11 @@
 			<div class="controlBlock">
 				<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 				@if ($errors->has('email'))
-					<span class="help-block">
-						<strong>{{ $errors->first('email') }}</strong>
-					</span>
+					<div>
+						<span class="help-block">
+							<strong>{{ $errors->first('email') }}</strong>
+						</span>
+					</div>
 				@endif
 				</div>
 			</div>
@@ -51,9 +53,17 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="controlBlock col-md-offset-4">
-				<input type="submit" class="btn btn-primary" value="Register">
+				<div class="col-md-6 col-md-offset-4">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="admin"> Хочу быть админом
+						</label>
+					</div>
 				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-8 col-md-offset-4">
+					<input type="submit" class="btn btn-primary" value='Зарегистрироваться'></div>
 			</div>
     	</form>
 	</div>

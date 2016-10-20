@@ -33,6 +33,10 @@
 				</div>
 			</div>
 		</div>
+		<div id='OrderPopUp'>
+			<h1>Оформление заказа</h1>
+			<div><input type='email' name='email' value='{{$email}}'></div>
+		</div>
 	@endsection
 @else
 	@include('layouts.topcontent')

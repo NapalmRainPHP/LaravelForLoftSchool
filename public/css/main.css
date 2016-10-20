@@ -1175,3 +1175,19 @@ a img.aligncenter {
 	border: 0;
 	cursor: pointer;
 }
+.sidebar-category__item {
+	position: relative;
+	z-index: 1;
+}
+.sidebar-category__item:hover::after {
+	content: attr(hint);
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: auto;
+	min-width: 200px;
+	background: #ffffff;
+	border: 1px solid red;
+	padding: 10px;
+	z-index: 2000;
+}

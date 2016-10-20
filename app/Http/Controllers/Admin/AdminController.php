@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Good;
 use App\GoodsCategory;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -17,7 +18,18 @@ class AdminPageController extends Controller {
 		return view('admin.newgood', ['catlist'=>$cats]);
 	}
 	public function GoodStore(Request $req) {
+		$g = new Good();
+		$g->Title = $req->Name;
+		$g->Price = $req->Price;
+		$g->Description = $req->Description;
+		$file = $req->file('image');
+		$newName = substr(base64_encode(time()), 0, 7).'.jpg';
+		$file->move('img/cover/', $newName);
 
+		$g->Image = $newName;
+		$g->CategoryID = $req->CategoryID;
+		$g->save();
+		return redirect('/admin/goods/new');
 	}
 	public function AddCat() {
 		return view('admin.addcat');

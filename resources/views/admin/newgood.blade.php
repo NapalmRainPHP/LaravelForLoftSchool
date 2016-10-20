@@ -8,7 +8,7 @@
 		<div><input placeholder="Описание игры" name="Description" required></div>
 		<div><input placeholder="Цена" name="Price" required></div>
 		<div>
-			<select>
+			<select name="CategoryID">
 				@foreach($catlist as $cat)
 					<option value="{{$cat->id}}">{{$cat->Title}}</option>
 				@endforeach

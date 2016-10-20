@@ -18,11 +18,13 @@ class AdminPageController extends Controller {
 		return view('admin.newgood', ['catlist'=>$cats]);
 	}
 	public function GoodStore(Request $req) {
+		$this->validate($req, ['image'=>'image']);
 		$g = new Good();
 		$g->Title = $req->Name;
 		$g->Price = $req->Price;
 		$g->Description = $req->Description;
 		$file = $req->file('image');
+
 		$tmp1 = md5(microtime());
 		$tmp2 = md5(uniqid());
 
@@ -43,6 +45,5 @@ class AdminPageController extends Controller {
 		$cat->Description = $req->Description;
 		$cat->save();
 		return redirect('/admin/goods/addcategory');
-		//
 	}
 }

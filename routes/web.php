@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'IndexController@Index');
 Route::any('/ses', function () {
     return view('welcome');
 });
 
-Route::any('/goods', 'GoodsListController@index');
+Route::any('/games', 'GoodsListController@index');
+Route::any('/games/{id}', 'GoodsListController@index');
 
 Auth::routes();
 

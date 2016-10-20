@@ -43,7 +43,7 @@
 					<div class="payment-basket__status__basket"><span class="payment-basket__status__basket-value">0</span><span class="payment-basket__status__basket-value-descr">товаров</span></div>
 				</div>
 			</div>
-			<div class="authorization-block"><a href="register" class="authorization-block__link">Регистрация</a><a href="login" class="authorization-block__link">Войти</a></div>
+			<div class="authorization-block"><a href="{{url('/register')}}" class="authorization-block__link">Регистрация</a><a href="{{url('/login')}}" class="authorization-block__link">Войти</a></div>
 		</div>
 	</header>
 	<div class="middle">
@@ -52,11 +52,9 @@
 				<div class="sidebar-item__title">Категории</div>
 				<div class="sidebar-item__content">
 					<ul class="sidebar-category">
-						<li class="sidebar-category__item"><a href="#" class="sidebar-category__item__link">Action</a></li>
-						<li class="sidebar-category__item"><a href="#" class="sidebar-category__item__link">RPG</a></li>
-						<li class="sidebar-category__item"><a href="#" class="sidebar-category__item__link">Квесты</a></li>
-						<li class="sidebar-category__item"><a href="#" class="sidebar-category__item__link">Онлайн-игры</a></li>
-						<li class="sidebar-category__item"><a href="#" class="sidebar-category__item__link">Стратегии</a></li>
+						@foreach($Categories AS $category)
+							<li class="sidebar-category__item"><a href="{{url('/search/category/'.$category->Title)}}" class="sidebar-category__item__link">{{$category->Title}}</a></li>
+						@endforeach
 					</ul>
 				</div>
 			</div>
@@ -94,10 +92,10 @@
 				<div class="random-product-container__head">Случайный товар</div>
 				<div class="random-product-container__content">
 					<div class="item-product">
-						<div class="item-product__title-product"><a href="#" class="item-product__title-product__link">The Witcher 3: Wild Hunt</a></div>
-						<div class="item-product__thumbnail"><a href="#" class="item-product__thumbnail__link"><img src="img/cover/game-1.jpg" alt="Preview-image" class="item-product__thumbnail__link__img"></a></div>
+						<div class="item-product__title-product"><a href="{{url('/games/'.$RandomeGame->id)}}" class="item-product__title-product__link">{{$RandomeGame->Title}}</a></div>
+						<div class="item-product__thumbnail"><a href="{{url('/games/'.$RandomeGame->id)}}" class="item-product__thumbnail__link"><img src="{{url('/img/cover/'.$RandomeGame->Image)}}" alt="Preview-image" class="item-product__thumbnail__link__img"></a></div>
 						<div class="item-product__description">
-							<div class="item-product__description__products-price"><span class="products-price">400 руб</span></div>
+							<div class="item-product__description__products-price"><span class="products-price">{{$RandomeGame->Price}} руб</span></div>
 							<div class="item-product__description__btn-block"><a href="#" class="btn btn-blue">Купить</a></div>
 						</div>
 					</div>
@@ -125,6 +123,7 @@
 		</div>
 	</footer>
 </div>
-<script src="js/main.js"></script>
+<script src="{{url('js/jquery.js')}}"></script>
+<script src="{{url('js/main.js')}}"></script>
 </body>
 </html>

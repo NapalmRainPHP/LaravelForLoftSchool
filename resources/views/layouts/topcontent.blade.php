@@ -10,10 +10,15 @@
 		</div>
 		<div class="content-head__search-block">
 			<div class="search-container">
-				<form class="search-container__form">
-					<input type="text" class="search-container__form__input">
-					<button class="search-container__form__btn">search</button>
-				</form>
+				<input type="text" class="search-container__form__input" id="InputForSeader">
+				<button class="search-container__form__btn" onclick="goSearch()">search</button>
+				<script>
+					function goSearch(e) {
+//						e.preventDefault();
+						var s = $('#InputForSeader')[0].value;
+						location.href = '{{url('/search/')}}/'+s;
+					}
+				</script>
 			</div>
 		</div>
 	</div>
